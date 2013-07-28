@@ -68,7 +68,7 @@ void Database::truncateTable(const char* tableName)
     query += tableName;
     query += ";";
     dbExecQuery(query);
-    dbExecQuery("VACCUM;");
+    dbExecQuery("VACUUM;");
 }
 
 void Database::createModel()
