@@ -62,6 +62,15 @@ void Database::dropModel()
 	}
 }
 
+void Database::truncateTable(const char* tableName)
+{
+    std::string query="DELETE FROM ";
+    query += tableName;
+    query += ";";
+    dbExecQuery(query);
+    dbExecQuery("VACCUM");
+}
+
 void Database::createModel()
 {
 	if(!mx)

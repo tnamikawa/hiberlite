@@ -65,6 +65,7 @@ class Database : noncopyable
 
 		std::vector<std::string> checkModel();
 		void dropModel();
+        void truncateTable(const char* tableName);
 		void createModel();
 
 		template<class C>
